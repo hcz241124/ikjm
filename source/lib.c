@@ -1,7 +1,6 @@
 #include "hcz/ikjm/capi/version.h"
 
 #include <stdio.h>
-#include <string.h>
 
 #ifndef MAX_PATH
 #define MAX_PATH 0xFF
