@@ -1,3 +1,4 @@
+
 #[derive(Debug, PartialEq)] // 自动派生 `Debug` 和 `PartialEq`
 pub struct Version {
     major: u16,
@@ -52,9 +53,9 @@ impl Version {
         }
     }
 
-    fn display(&self) {
+    fn display(&self) -> String {
         let name: &str = env!("CARGO_PKG_NAME");
-        println!("{} Version: {}.{}.{} (Pre: {:X} Build: {})", name, self.major, self.minor, self.patch, self.pre_version.unwrap_or(0x0), self.build.unwrap_or(0x0));
+        format!("{} Version: {}.{}.{} (PreVersion: {:X} BuildNumber: {})", name, self.major, self.minor, self.patch, self.pre_version.unwrap_or(0x0), self.build.unwrap_or(0x0))
     }
 }
 
@@ -77,8 +78,12 @@ pub fn hexversion() -> u64 {
     cal_hexnumber_from_version(&version)
 }
 
+pub fn version() -> String {
+    Version::from_cargo_version().display()
+}
+
 mod test {
-    use super::*;
+    use super::{cal_hexnumber_from_version, get_version, Version};
 
     #[test]
     fn compile_hexversion() {

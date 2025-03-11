@@ -1,5 +1,5 @@
-py3 ?= python3.11
+py3 ?= python3
 init_env:
-	$(py3) -m vene .env
+	$(py3) -m venv .env
 
 .PHONY: init_env
