@@ -1,11 +1,11 @@
 
 #[derive(Debug, PartialEq)] // 自动派生 `Debug` 和 `PartialEq`
 pub struct Version {
-    major: u16,
-    minor: u16,
-    patch: u16,
-    pre_version: Option<u8>, // pre_version 作为 u8
-    build: Option<u8>,       // build 也作为 u8
+    pub major: u16,
+    pub minor: u16,
+    pub patch: u16,
+    pub pre_version: Option<u8>, // pre_version 作为 u8
+    pub build: Option<u8>,       // build 也作为 u8
 }
 
 impl Version {
