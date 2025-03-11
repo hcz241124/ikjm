@@ -8,7 +8,7 @@ pub struct Version {
 }
 
 impl Version {
-    pub fn from_cargo_version() -> Self {
+    fn from_cargo_version() -> Self {
         let version_str = env!("CARGO_PKG_VERSION");
 
         let parts: Vec<&str> = version_str.split('+').collect();
@@ -52,7 +52,7 @@ impl Version {
         }
     }
 
-    pub fn display(&self) {
+    fn display(&self) {
         let name: &str = env!("CARGO_PKG_NAME");
         println!("{} Version: {}.{}.{} (Pre: {:X} Build: {})", name, self.major, self.minor, self.patch, self.pre_version.unwrap_or(0x0), self.build.unwrap_or(0x0));
     }
