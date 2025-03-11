@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "crates/hcz-core-rs",
+    "crates/pyhcz-rs",
+]
