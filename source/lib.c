@@ -9,11 +9,11 @@
 ikjm_version_t s_ikjm4c_version = {
     .major = 0, .minor = 1, .patch = 0, .release_version = 0xA, .build = 1};
 
-__attribute__((visibility("hidden"))) const char *_ikjm4c_get_build_time() {
+IKJM4C_INNER const char *_ikjm4c_get_build_time() {
   return __DATE__ " " __TIME__;
 }
 
-__attribute__((visibility("hidden"))) const char *
+IKJM4C_INNER const char *
 _ikjm4c_get_release_version(char release_version) {
   if (release_version == 0xA) {
     return "Alpha";
