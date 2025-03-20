@@ -1,5 +1,5 @@
-#ifndef HCZ_IKJM_CAPI_API_H
-#define HCZ_IKJM_CAPI_API_H
+#ifndef LIFE_HCZ_IKJM4C_API_H_
+#define LIFE_HCZ_IKJM4C_API_H_
 
 // clang-format off
 #if defined(IKJM4C_EXPORT_API)
@@ -41,4 +41,4 @@
 #endif
 // clang-format on
 
-#endif // HCZ_IKJM_CAPI_API_H
+#endif // LIFE_HCZ_IKJM4C_API_H_

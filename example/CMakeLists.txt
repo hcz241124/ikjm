@@ -3,5 +3,5 @@ add_executable(ikjm4c_sample
 )
 target_link_libraries(ikjm4c_sample
 PRIVATE
-    hcz::ikjm4c
+    hcz::ris
 )
